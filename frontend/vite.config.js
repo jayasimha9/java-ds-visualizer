@@ -4,18 +4,16 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/',
   build: {
     outDir: 'dist',
-    assetsDir: 'assets',
+    sourcemap: true,
+    manifest: true,
     rollupOptions: {
-      output: {
-        manualChunks: undefined,
-        format: 'es',
-        entryFileNames: 'assets/[name]-[hash].js',
-        chunkFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]'
-      }
+      input: './index.html',
     }
+  },
+  server: {
+    port: 5173,
+    strictPort: true
   }
 })

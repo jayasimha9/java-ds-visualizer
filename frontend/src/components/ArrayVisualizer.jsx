@@ -4,7 +4,7 @@ import toast from 'react-hot-toast';
 import TimeComplexity from './TimeComplexity';
 import './ArrayVisualizer.css';
 
-const API_BASE_URL = 'http://localhost:8080/api/array';
+const API_BASE_URL = `${import.meta.env.VITE_API_URL}/api/array`;
 
 export default function ArrayVisualizer() {
   const [array, setArray] = useState([]);

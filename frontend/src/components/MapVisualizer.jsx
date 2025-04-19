@@ -4,7 +4,7 @@ import toast from 'react-hot-toast';
 import TimeComplexity from './TimeComplexity';
 import './MapVisualizer.css';
 
-const API_BASE_URL = 'http://localhost:8080/api/map';
+const API_BASE_URL = `${import.meta.env.VITE_API_URL}/api/map`;
 
 export default function MapVisualizer() {
   const [map, setMap] = useState({});

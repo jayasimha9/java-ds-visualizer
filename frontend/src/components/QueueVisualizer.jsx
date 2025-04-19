@@ -4,7 +4,7 @@ import toast from 'react-hot-toast';
 import TimeComplexity from './TimeComplexity';
 import './QueueVisualizer.css';
 
-const API_BASE_URL = 'http://localhost:8080/api/queue';
+const API_BASE_URL = `${import.meta.env.VITE_API_URL}/api/queue`;
 
 export default function QueueVisualizer() {
   const [queue, setQueue] = useState([]);

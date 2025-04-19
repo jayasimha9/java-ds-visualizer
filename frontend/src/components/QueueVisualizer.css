@@ -1,0 +1,150 @@
+.queue-container {
+  padding: 1rem;
+}
+
+.queue-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.input {
+  flex: 1;
+  min-width: 120px;
+  padding: 0.5rem;
+  border: 2px solid #E2E8F0;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 80px;
+}
+
+.button.enqueue {
+  background-color: #319795;
+  color: white;
+}
+
+.button.enqueue:hover {
+  background-color: #2C7A7B;
+}
+
+.button.dequeue {
+  background-color: #DD6B20;
+  color: white;
+}
+
+.button.dequeue:hover {
+  background-color: #C05621;
+}
+
+.button.peek {
+  background-color: #3182CE;
+  color: white;
+}
+
+.button.peek:hover {
+  background-color: #2B6CB0;
+}
+
+.button.reset {
+  background-color: #E53E3E;
+  color: white;
+}
+
+.button.reset:hover {
+  background-color: #C53030;
+}
+
+.queue-visualization {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 200px;
+  position: relative;
+}
+
+.queue-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.front-label, .back-label {
+  font-weight: 600;
+  color: #4A5568;
+  position: relative;
+}
+
+.front-label::after, .back-label::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+
+.front-label::after {
+  border-top: 6px solid #4A5568;
+}
+
+.back-label::after {
+  border-top: 6px solid #4A5568;
+}
+
+.queue-items {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+.queue-item {
+  background-color: #2C7A7B;
+  border: 2px solid #1D4044;
+  border-radius: 0.375rem;
+  color: white;
+  padding: 1rem;
+  min-width: 60px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.queue-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.queue-item.front {
+  background-color: #2B6CB0;
+  border-color: #2C5282;
+}
+
+.queue-item.back {
+  background-color: #319795;
+  border-color: #2C7A7B;
+}
+
+.empty-message {
+  text-align: center;
+  color: #718096;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+}
